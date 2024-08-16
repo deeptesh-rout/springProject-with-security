@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title> Mega menu</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<body class="bg-gradient-to-t from-purple-300 to-purple-100 flex flex-col gap-12 items-center justify-center min-h-screen p-4
+        before:[&:has(#radio-1:checked)_#toggle-1]:scale-100
+        before:[&:has(#radio-2:checked)_#toggle-2]:scale-100
+        before:[&:has(#radio-3:checked)_#toggle-3]:scale-100
+        before:[&:has(#radio-4:checked)_#toggle-4]:scale-100
+        before:[&:has(#radio-5:checked)_#toggle-5]:scale-100
+        before:[&:has(#radio-6:checked)_#toggle-6]:scale-100
+        before:[&:has(#radio-7:checked)_#toggle-7]:scale-100
+    ">
+
+  <div class="bg-white/50 backdrop-blur-md ring ring-black/5 p-8 w-full max-w-5xl rounded-xl shadow-2xl shadow-purple-300 ">
+    <nav class="flex flex-wrap gap-0 text-sm
+                *:py-2
+                *:px-4
+                *:relative
+                *:isolate 
+                *:cursor-pointer
+                *:whitespace-nowrap
+                before:*:absolute
+                before:*:w-full
+                before:*:h-1
+                before:*:left-0
+                before:*:bottom-0
+                before:*:bg-purple-400
+                before:*:rounded-full
+                before:*:transition-all
+                before:*:duration-500
+                before:*:ease-[cubic-bezier(.47,1.64,.38,.87)]
+                before:*:scale-0
+                before:*:origin-left 
+                hover:before:*:scale-100
+            ">
+      <label id="toggle-1" for="radio-1">Furniture</label>
+      <label id="toggle-2" for="radio-2">Lighting</label>
+      <label id="toggle-3" for="radio-3">Decor</label>
+      <label id="toggle-4" for="radio-4">Serving & Tableware</label>
+      <label id="toggle-5" for="radio-5">Textiles & Carpets</label>
+      <label id="toggle-6" for="radio-6">Jewelry & Accessories</label>
+      <label id="toggle-7" for="radio-7">Outdoor enviroment</label>
+    </nav>
+
+    <section class="grid [grid-template-areas:'stack']  mt-8
+                [&>article]:[grid-area:stack]
+                [&>article]:transition-all
+                [&>article]:duration-500
+                [&>article>div]:scale-0
+                [&>article>div]:origin-top
+                [&>article>div]:transition-all
+                [&>article>div]:duration-500
+                [&>input:checked+article>div]:ease-[cubic-bezier(.47,1.64,.38,.87)]
+                [&>input:checked+article>div]:scale-100
+                [&>input:checked+article>div]:delay-500
+                [&>input:checked+article>div:nth-child(2)]:delay-[800ms]
+                [&>input:checked+article>div:nth-child(3)]:delay-[1100ms]
+                [&>input:checked+article>div:nth-child(4)]:delay-[1400ms]
+                [&>article]:grid
+                [&>article]:grid-cols-1
+                min-[400px]:[&>article]:grid-cols-2
+                sm:[&>article]:grid-cols-4
+                [&>article]:gap-4
+                [&_h3]:font-medium
+                [&_h3]:mb-2
+                [&_h3]:text-sm
+                [&_h3]:px-3
+
+                [&_a]:font-thin
+                [&_a]:text-sm
+                [&_a]:py-1 
+                [&_a]:px-3
+                [&_a]:relative
+                [&_a]:isolate 
+                [&_a]:block 
+
+                before:[&_a]:absolute
+                before:[&_a]:inset-[0_100%_0_0]
+                before:[&_a]:bg-gradient-to-r
+                before:[&_a]:from-purple-300
+                before:[&_a]:to-purple-transparent
+                before:[&_a]:-z-10
+                before:[&_a]:rounded-md
+                before:[&_a]:transition-all
+                before:[&_a]:duration-500
+                before:[&_a]:ease-in-out
+                hover:before:[&_a]:inset-0
+            ">
+      <!-- furniture -->
+      <input type="radio" id="radio-1" name="panel-toggle" class="sr-only">
+      <article id="panel-1">
+        <div>
+          <h3>Living Room</h3>
+          <ul>
+            <li><a href="#">Sofas</a></li>
+            <li><a href="#">Coffee Tables</a></li>
+            <li><a href="#">TV Stands</a></li>
+            <li><a href="#">Bookshelves</a></li>
+            <li><a href="#">Rugs</a></li>
+            <li><a href="#">Curtains</a></li>
+            <li><a href="#">Lamps</a></li>
+            <li><a href="#">Wall Art</a></li>
+            <li><a href="#">Chairs</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3>Kitchen</h3>
+          <ul>
+            <li><a href="#">Cookware</a></li>
+            <li><a href="#">Cutlery</a></li>
+            <li><a href="#">Appliances</a></li>
+            <li><a href="#">Storage Solutions</a></li>
+            <li><a href="#">Dining Tables</a></li>
+            <li><a href="#">Chairs</a></li>
+            <li><a href="#">Kitchen Islands</a></li>
+            <li><a href="#">Tableware</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3>Bedroom</h3>
+          <ul>
+            <li><a href="#">Beds</a></li>
+            <li><a href="#">Wardrobes</a></li>
+            <li><a href="#">Dressers</a></li>
+            <li><a href="#">Nightstands</a></li>
+            <li><a href="#">Bedding</a></li>
+            <li><a href="#">Mirrors</a></li>
+            <li><a href="#">Lamps</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3>Entrance & Hallways</h3>
+          <ul>
+            <li><a href="#">Console Tables</a></li>
+            <li><a href="#">Coat Racks</a></li>
+            <li><a href="#">Shoe Storage</a></li>
+            <li><a href="#">Mirrors</a></li>
+            <li><a href="#">Rugs</a></li>
+            <li><a href="#">Lighting</a></li>
+          </ul>
+        </div>
+
+      </article>
+
+      <!-- ligning -->
+      <input type="radio" id="radio-2" name="panel-toggle" class="sr-only">
+      <article id="panel-1">
+        <div>
+          <h3>Interior</h3>
+          <ul>
+            <li><a href="#">Ceiling Lights</a></li>
+            <li><a href="#">Pendant Lights</a></li>
+            <li><a href="#">Chandeliers</a></li>
+            <li><a href="#">Recessed Lighting</a></li>
+            <li><a href="#">Track Lighting</a></li>
+            <li><a href="#">Wall Sconces</a></li>
+            <li><a href="#">Table Lamps</a></li>
+            <li><a href="#">Floor Lamps</a></li>
+            <li><a href="#">Under Cabinet Lighting</a></li>
+            <li><a href="#">Accent Lighting</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3>Exterior</h3>
+          <ul>
+            <li><a href="#">Outdoor Wall Lights</a></li>
+            <li><a href="#">Outdoor Ceiling Lights</a></li>
+            <li><a href="#">Landscape Lighting</a></li>
+            <li><a href="#">Pathway Lights</a></li>
+            <li><a href="#">Deck & Step Lights</a></li>
+            <li><a href="#">Outdoor Post Lights</a></li>
+            <li><a href="#">Security Lights</a></li>
+            <li><a href="#">Flood Lights</a></li>
+            <li><a href="#">String Lights</a></li>
+            <li><a href="#">Solar Lights</a></li>
+          </ul>
+        </div>
+
+      </article>
+
+      <!-- decor -->
+      <input type="radio" id="radio-3" name="panel-toggle" class="sr-only" checked>
+      <article id="panel-1">
+        <div>
+          <h3>Decoration</h3>
+          <ul>
+            <li><a href="#">Vases</a></li>
+            <li><a href="#">Jars</a></li>
+            <li><a href="#">Posters</a></li>
+            <li><a href="#">Photo frames</a></li>
+            <li><a href="#">Sculptures</a></li>
+            <li><a href="#">Wall</a></li>
+            <li><a href="#">Bordur</a></li>
+            <li><a href="#">Alarm clocks</a></li>
+            <li><a href="#">Pictures</a></li>
+            <li><a href="#">Picture frames</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3>Office & Small Storage</h3>
+          <ul>
+            <li><a href="#">Boxes</a></li>
+            <li><a href="#">Door stoppers</a></li>
+            <li><a href="#">Curves</a></li>
+            <li><a href="#">Magazine storage</a></li>
+            <li><a href="#">Wood storage</a></li>
+            <li><a href="#">Umbrella stand</a></li>
+            <li><a href="#">Key cabinet</a></li>
+            <li><a href="#">Calendars & notebooks</a></li>
+            <li><a href="#">Pedal Buckets</a></li>
+            <li><a href="#"></a></li>
+            <li><a href="#"></a></li>
+            <li><a href="#"></a></li>
+          </ul>
+        </div>
+        <div>
+          <h3>Bathroom</h3>
+          <ul>
+            <li><a href="#">Shower Curtains</a></li>
+            <li><a href="#">Towels</a></li>
+            <li><a href="#">Bath Mats</a></li>
+            <li><a href="#">Shower Caddies</a></li>
+            <li><a href="#">Soap Dispensers</a></li>
+            <li><a href="#">Toothbrush Holders</a></li>
+            <li><a href="#">Trash Cans</a></li>
+            <li><a href="#">Bathroom Storage</a></li>
+            <li><a href="#">Toilet Brushes</a></li>
+            <li><a href="#">Tissue Box Covers</a></li>
+            <li><a href="#">Bathroom Organizers</a></li>
+            <li><a href="#">Bathroom Mirrors</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3>Kitchen</h3>
+          <ul>
+            <li><a href="#">Cookware</a></li>
+            <li><a href="#">Cutlery</a></li>
+            <li><a href="#">Food Storage</a></li>
+            <li><a href="#">Kitchen Linens</a></li>
+            <li><a href="#">Utensils</a></li>
+            <li><a href="#">Kitchen Gadgets</a></li>
+            <li><a href="#">Knife Sets</a></li>
+            <li><a href="#">Food Containers</a></li>
+            <li><a href="#">Bakeware</a></li>
+            <li><a href="#">Dinnerware</a></li>
+            <li><a href="#">Kitchen Appliances</a></li>
+            <li><a href="#">Kitchen Organization</a></li>
+          </ul>
+        </div>
+      </article>
+
+      <!-- serving -->
+      <input type="radio" id="radio-4" name="panel-toggle" class="sr-only">
+      <article id="panel-1">
+        <div>
+          <h3>Serving and Tableware</h3>
+          <ul>
+            <li><a href="#">Dinnerware Sets</a></li>
+            <li><a href="#">Plates</a></li>
+            <li><a href="#">Bowls</a></li>
+            <li><a href="#">Cups & Mugs</a></li>
+            <li><a href="#">Cutlery</a></li>
+            <li><a href="#">Serving Platters</a></li>
+            <li><a href="#">Serving Bowls</a></li>
+            <li><a href="#">Serving Utensils</a></li>
+            <li><a href="#">Pitchers</a></li>
+            <li><a href="#">Trays</a></li>
+            <li><a href="#">Napkins & Holders</a></li>
+            <li><a href="#">Tablecloths & Runners</a></li>
+          </ul>
+        </div>
+      </article>
+
+      <!-- textiles -->
+      <input type="radio" id="radio-5" name="panel-toggle" class="sr-only">
+      <article id="panel-1">
+        <div>
+          <h3>Textiles & Carpets</h3>
+          <ul>
+            <li><a href="#">Rugs</a></li>
+            <li><a href="#">Area Rugs</a></li>
+            <li><a href="#">Runners</a></li>
+            <li><a href="#">Accent Rugs</a></li>
+            <li><a href="#">Carpet Tiles</a></li>
+            <li><a href="#">Carpets</a></li>
+            <li><a href="#">Blankets</a></li>
+            <li><a href="#">Pillows</a></li>
+            <li><a href="#">Cushions</a></li>
+            <li><a href="#">Throws</a></li>
+            <li><a href="#">Table Linens</a></li>
+            <li><a href="#">Towels</a></li>
+          </ul>
+        </div>
+      </article>
+
+      <input type="radio" id="radio-6" name="panel-toggle" class="sr-only">
+      <article id="panel-1">
+        <div>
+          <h3>Jewelry</h3>
+          <ul>
+            <li><a href="#">Necklaces</a></li>
+            <li><a href="#">Earrings</a></li>
+            <li><a href="#">Bracelets</a></li>
+            <li><a href="#">Rings</a></li>
+            <li><a href="#">Anklets</a></li>
+            <li><a href="#">Brooches</a></li>
+            <li><a href="#">Pendants</a></li>
+            <li><a href="#">Charms</a></li>
+            <li><a href="#">Jewelry Sets</a></li>
+            <li><a href="#">Body Jewelry</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3>Accessories</h3>
+          <ul>
+            <li><a href="#">Handbags</a></li>
+            <li><a href="#">Wallets</a></li>
+            <li><a href="#">Scarves</a></li>
+            <li><a href="#">Hats</a></li>
+            <li><a href="#">Belts</a></li>
+            <li><a href="#">Gloves</a></li>
+            <li><a href="#">Sunglasses</a></li>
+            <li><a href="#">Hair Accessories</a></li>
+            <li><a href="#">Ties & Bowties</a></li>
+            <li><a href="#">Watches</a></li>
+          </ul>
+        </div>
+
+      </article>
+
+      <input type="radio" id="radio-7" name="panel-toggle" class="sr-only">
+      <article id="panel-1">
+        <div>
+          <h3>Terrace</h3>
+          <ul>
+            <li><a href="#">Outdoor Furniture</a></li>
+            <li><a href="#">Patio Umbrellas</a></li>
+            <li><a href="#">Outdoor Rugs</a></li>
+            <li><a href="#">Outdoor Cushions</a></li>
+            <li><a href="#">Outdoor Lighting</a></li>
+            <li><a href="#">Pots & Planters</a></li>
+            <li><a href="#">Outdoor Decor</a></li>
+            <li><a href="#">Grills & Outdoor Cooking</a></li>
+            <li><a href="#">Outdoor Storage</a></li>
+            <li><a href="#">Outdoor Heating</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3>Garden</h3>
+          <ul>
+            <li><a href="#">Garden Tools</a></li>
+            <li><a href="#">Gardening Gloves</a></li>
+            <li><a href="#">Planting Supplies</a></li>
+            <li><a href="#">Garden Decor</a></li>
+            <li><a href="#">Garden Structures</a></li>
+            <li><a href="#">Planters & Raised Beds</a></li>
+            <li><a href="#">Watering Equipment</a></li>
+            <li><a href="#">Outdoor Seating</a></li>
+            <li><a href="#">Bird Feeders & Baths</a></li>
+            <li><a href="#">Garden Lighting</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3>Workshop</h3>
+          <ul>
+            <li><a href="#">Power Tools</a></li>
+            <li><a href="#">Hand Tools</a></li>
+            <li><a href="#">Tool Storage</a></li>
+            <li><a href="#">Workbenches</a></li>
+            <li><a href="#">Tool Accessories</a></li>
+            <li><a href="#">Safety Equipment</a></li>
+            <li><a href="#">Workshop Lighting</a></li>
+            <li><a href="#">Workshop Organization</a></li>
+            <li><a href="#">Ladders & Scaffolding</a></li>
+            <li><a href="#">Measuring & Layout Tools</a></li>
+          </ul>
+        </div>
+      </article>
+    </section>
+
+  </div>
+</body>
+<!-- partial -->
+  
+</body>
+</html>
